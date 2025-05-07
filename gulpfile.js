@@ -29,13 +29,13 @@ const ttf2woff2 = require("gulp-ttf2woff2");
 // Підключаємо плагін для модульної верстки
 const include = require("gulp-include");
 
-// Підключаємо плагін для svg іконок
-const svgmin = require("gulp-svgmin");
+// Підключаємо плагін для створення svg спрайту
+const svgstore = require("gulp-svgstore");
 
-// Створюємо функцію для svg іконок
+// Створюємо функцію для створення svg спрайту
 function sprites() {
   return src("app/images/sprite/*.svg")
-    .pipe(svgmin())
+    .pipe(svgstore())
     .pipe(dest("app/images"));
 }
 
@@ -105,8 +105,8 @@ function watching() {
       baseDir: "app/"
     }
   });
-  // Слідкуємо за змінами в файлі стилів scss
-  watch(["app/scss/style.scss"], styles);
+  // Слідкуємо за змінами в файлах стилів scss
+  watch(["app/scss/*.scss"], styles);
   // Слідкуємо за змінами в js файлах
   watch(["app/js/main.js"], scripts);
   // Слідкуємо за змінами в images
