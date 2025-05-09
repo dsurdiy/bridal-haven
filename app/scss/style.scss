@@ -52,3 +52,105 @@ body {
     gap: 30px;
   }
 }
+
+.footer {
+  font-size: 16px;
+  color: vars.$color-text-muted;
+
+  // .footer__menu
+  &__menu {
+    padding: 55px 0 44px;
+    border-bottom: 1px solid vars.$bg-primary;
+    margin-bottom: 50px;
+  }
+  // .footer__menu-list
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  // .footer__elements
+  &__elements {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  // .footer__element-title
+  &__element-title {
+    opacity: 0.5;
+    margin-bottom: 30px;
+  }
+  // .footer__element-item
+  &__element-item {
+    margin-bottom: 5px;
+  }
+  // .footer__address
+  &__address {
+    font-style: normal;
+  }
+  // .footer__social-list
+  &__social-list {
+    display: flex;
+    gap: 10px;
+  }
+  // .footer__form
+  &__form {
+    width: 250px;
+    position: relative;
+  }
+  // .footer__form-input
+  &__form-input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid vars.$bg-primary;
+    padding: 1px 30px 5px 0;
+    color: vars.$color-text-muted;
+    &::placeholder {
+      color: vars.$color-text-muted;
+    }
+  }
+  // .footer__form-btn
+  &__form-btn {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  // .footer__bottom
+  &__bottom {
+    background-color: vars.$bg-primary;
+    padding: 7px 0 9px;
+    color: vars.$color-primary;
+    font-size: 11px;
+  }
+  // .footer__bottom-inner
+  &__bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 26px;
+  }
+  // .footer__bottom-list
+  &__bottom-list {
+    display: flex;
+    gap: 0 37px;
+  }
+  // .footer__bottom-item
+  &__bottom-item + .footer__bottom-item {
+    position: relative;
+    &::before {
+      content: "|";
+      position: absolute;
+      left: -21px;
+    }
+  }
+}
+.container {
+}
+.logo {
+}
