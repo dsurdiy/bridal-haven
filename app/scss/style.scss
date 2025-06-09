@@ -201,3 +201,70 @@ body {
     border-radius: 3px;
   }
 }
+
+.new-collection {
+  background-image: url("../images/top-decor.svg");
+  background-repeat: no-repeat;
+  background-position: 150px -50%;
+
+  &__inner {
+    padding: 150px 0;
+    display: flex;
+  }
+
+  &__content {
+    max-width: 492px;
+    padding: 70px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    color: vars.$color-text-muted;
+  }
+
+  &__link {
+    margin-top: auto;
+    font-size: 16px;
+    color: vars.$color-text-muted;
+    padding: 10px 65px;
+    border: 1px solid vars.$bg-primary;
+    align-self: start;
+  }
+
+  &__img {
+    padding-top: 75px;
+    flex-basis: 347px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__box {
+    position: relative;
+    max-width: 361px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__box-img {
+    width: 404px;
+    position: absolute;
+    top: 0;
+    left: -70px;
+  }
+
+  &__caption {
+    margin-top: auto;
+    padding: 30px;
+    color: vars.$color-text-muted;
+  }
+}
