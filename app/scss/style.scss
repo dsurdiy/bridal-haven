@@ -268,3 +268,259 @@ body {
     color: vars.$color-text-muted;
   }
 }
+
+.join-us {
+  background-color: vars.$bg-primary;
+
+  &__inner {
+    display: flex;
+    gap: 40px;
+    padding: 0 40px;
+  }
+
+  &__img {
+    max-width: 540px;
+  }
+
+  &__box {
+    padding: 35px 0;
+  }
+
+  &__title {
+    font-size: 45px;
+    margin-bottom: 20px;
+    @extend %lora-400;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-size: 30px;
+    margin-bottom: 40px;
+    @extend %lora-400;
+    color: vars.$color-primary;
+  }
+
+  &__form {
+    margin-bottom: 0;
+  }
+
+  &__input {
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid vars.$color-text-muted;
+    color: vars.$color-text-muted;
+    @extend %opensans-400;
+  }
+
+  &__input + .join-us__input {
+    margin-top: 20px;
+  }
+
+  &__btn {
+    text-transform: uppercase;
+    width: 100%;
+    padding: 12px;
+    background-color: vars.$color-accent;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__form-caption {
+    font-size: 11px;
+  }
+}
+
+.designer {
+  padding: 150px 0 210px;
+  position: relative;
+
+  &__img-decor {
+    position: absolute;
+    top: -225px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+  }
+
+  &__inner {
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__content {
+    max-width: 400px;
+  }
+
+  &__title {
+    font-size: 45px;
+    margin-bottom: 50px;
+    @extend %lora-400;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: vars.$color-text-muted;
+    margin-bottom: 20px;
+  }
+
+  &__box {
+    text-align: center;
+    position: relative;
+  }
+
+  &__img {
+    margin-bottom: 40px;
+  }
+
+  &__caption {
+    width: 300px;
+    @extend %lora-400;
+    padding: 20px 18px;
+    border: 3px solid vars.$bg-primary;
+    position: absolute;
+    top: 180px;
+    left: -160px;
+    background-color: #fff;
+  }
+
+  &__link {
+    font-size: 16px;
+    padding: 10px 90px;
+    color: vars.$color-text-muted;
+    border: 1px solid vars.$color-text-muted;
+  }
+}
+
+.our-advantages {
+  background-color: vars.$bg-primary;
+
+  &__wrapper {
+    padding: 64px 0 34px;
+    display: flex;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+  }
+
+  &__img-decor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__inner {
+    margin-left: auto;
+    padding-right: 128px;
+  }
+
+  &__title {
+    font-size: 45px;
+    margin-bottom: 50px;
+    @extend %lora-400;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    column-count: 2;
+    column-gap: 80px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    padding-left: 50px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 30px;
+      height: 22px;
+      background-image: url("../images/our-advantages-item-decor.svg");
+    }
+  }
+}
+
+.our-blog {
+  padding: 150px 0 0;
+
+  &__inner {
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 280px 330px;
+    gap: 20px;
+    background-image: url("../images/our-blog-img-decor.svg");
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    padding-bottom: 100px;
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-size: 45px;
+    margin-bottom: 50px;
+    @extend %lora-400;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 400px;
+    font-size: 16px;
+    margin-bottom: 50px;
+    color: vars.$color-text-muted;
+  }
+
+  &__link {
+    font-size: 16px;
+    padding: 10px 90px;
+    color: vars.$color-text-muted;
+    border: 1px solid vars.$color-text-muted;
+  }
+
+  &__img {
+  }
+
+  &__box {
+  }
+
+  &__box-right {
+    grid-row: span 2;
+    align-self: center;
+  }
+
+  &__box-img {
+    margin-bottom: 20px;
+  }
+
+  &__box-link {
+    display: inline-block;
+    margin-bottom: 5px;
+    @extend %lora-400;
+    color: vars.$color-text-muted;
+  }
+
+  &__box-date {
+    font-size: 16px;
+    @extend %opensans-300;
+  }
+
+  &__box-bottom {
+    grid-column: span 2;
+    margin-left: auto;
+  }
+}
