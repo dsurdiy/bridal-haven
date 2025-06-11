@@ -290,6 +290,7 @@ body {
     font-size: 45px;
     margin-bottom: 20px;
     @extend %lora-400;
+    text-transform: uppercase;
   }
 
   &__text {
@@ -329,6 +330,8 @@ body {
     cursor: pointer;
     margin-top: 40px;
     margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
   }
 
   &__form-caption {
@@ -338,6 +341,15 @@ body {
 
 .designer {
   padding: 150px 0 210px;
+  position: relative;
+
+  &__img-decor {
+    position: absolute;
+    top: -225px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+  }
 
   &__inner {
     padding: 0 40px;
@@ -386,5 +398,58 @@ body {
     padding: 10px 90px;
     color: vars.$color-text-muted;
     border: 1px solid vars.$color-text-muted;
+  }
+}
+
+.our-advantages {
+  background-color: vars.$bg-primary;
+
+  &__wrapper {
+    padding: 64px 0 34px;
+    display: flex;
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+  }
+
+  &__img-decor {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__inner {
+    margin-left: auto;
+    padding-right: 128px;
+  }
+
+  &__title {
+    font-size: 45px;
+    margin-bottom: 50px;
+    @extend %lora-400;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    column-count: 2;
+    column-gap: 80px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    padding-left: 50px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 30px;
+      height: 22px;
+      background-image: url("../images/our-advantages-item-decor.svg");
+    }
   }
 }
