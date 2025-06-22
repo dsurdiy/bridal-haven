@@ -1004,3 +1004,66 @@ body {
 .arrow-next {
   right: 7px;
 }
+
+.page-404 {
+  &__container {
+    max-width: 1560px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    width: 731px;
+    margin: 205px 14px 0 35px;
+    @extend %lora-400;
+  }
+
+  &__title {
+    font-size: 160px;
+    margin-bottom: 60px;
+  }
+
+  &__link {
+    font-size: 48px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    span {
+      display: inline-block;
+      width: 621px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.moving {
+  overflow: hidden;
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+    @extend %lora-400;
+    font-size: 160px;
+    opacity: 0.2;
+    text-transform: uppercase;
+    animation-name: moving;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
