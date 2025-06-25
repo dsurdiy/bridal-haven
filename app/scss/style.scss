@@ -1349,3 +1349,153 @@ body {
     }
   }
 }
+
+.reviews-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 60px 0;
+  &__title {
+    @extend %lora-400;
+    font-size: 64px;
+  }
+
+  &__link {
+    font-size: 24px;
+    color: rgba($color: vars.$color-accent, $alpha: 0.4);
+    border-bottom: 1px solid vars.$color-accent;
+  }
+}
+
+.reviews-slider {
+  overflow: hidden;
+  width: calc(100vw - (100vw - 1500px) / 2);
+  margin-bottom: 25px;
+
+  &__wrapper {
+  }
+
+  &__slide {
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.reviews-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
+.reviews-slider-arrow {
+  position: absolute;
+  top: 24px;
+  cursor: pointer;
+}
+
+.reviews-slider-prev {
+  right: 160px;
+}
+
+.reviews-slider-next {
+  right: 0;
+}
+
+.reviews-slider-pagination {
+  position: absolute;
+  top: 21px;
+  right: 44px;
+  left: auto;
+  font-size: 18px;
+  color: rgba($color: vars.$color-accent, $alpha: 0.3);
+  width: auto;
+  .swiper-pagination-current {
+    padding-right: 17px;
+    color: vars.$color-accent;
+  }
+  .swiper-pagination-total {
+    padding-left: 17px;
+  }
+}
+
+.reviews-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  &__number {
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    margin-left: 10px;
+    font-size: 16px;
+    color: rgba($color: vars.$color-accent, $alpha: 0.4);
+    border-bottom: 1px solid vars.$color-accent;
+  }
+}
+
+.reviews-new {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 24px 40px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 1px solid vars.$color-accent;
+  margin-bottom: 60px;
+}
+
+.reviews {
+  &__items {
+  }
+
+  &__item {
+    margin-top: 20px;
+    border: 1px solid #dcdcdc;
+    padding: 40px 50px;
+  }
+
+  &__item-date {
+    font-size: 14px;
+    opacity: 0.3;
+    margin-bottom: 16px;
+  }
+
+  &__item-name {
+    margin-top: 18px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+  }
+
+  &__item-name-img {
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  &__item-text {
+    max-width: 1220px;
+  }
+
+  &__item-images {
+    margin-top: 24px;
+    display: flex;
+    gap: 10px;
+    img {
+      object-fit: cover;
+    }
+  }
+}
