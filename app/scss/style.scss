@@ -2,6 +2,7 @@
 @use "reset";
 @use "fonts";
 @use "../../node_modules/swiper/swiper-bundle.css";
+@use "../../node_modules/nouislider/dist/nouislider.css";
 @use "global";
 
 body {
@@ -1154,7 +1155,6 @@ body {
   }
 
   &__list {
-    display: grid;
     gap: 50px 20px;
     grid-template-columns: repeat(4, 1fr);
   }
@@ -1497,5 +1497,307 @@ body {
     img {
       object-fit: cover;
     }
+  }
+}
+
+.catalog {
+  &__top {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__view-mode {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 11px;
+    color: vars.$color-text-muted;
+  }
+
+  &__title {
+    @extend %lora-400;
+    font-size: 45px;
+    text-transform: uppercase;
+  }
+
+  &__sort {
+  }
+
+  &__sort-form {
+  }
+
+  &__sort-wrapper {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9px;
+      right: 9px;
+      width: 14px;
+      height: 9px;
+      background-image: url(../images/sort-arrow.svg);
+    }
+  }
+
+  &__sort-select {
+    padding: 5px 30px 5px 9px;
+    width: 175px;
+    font-size: 11px;
+    color: vars.$color-text-muted;
+    border: 1px solid vars.$color-text-muted;
+    border-radius: 3px;
+    appearance: none;
+  }
+
+  &__content {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__filter {
+    width: 270px;
+    padding: 20px 26px;
+    border: 1px solid #e9e1d7;
+    align-self: flex-start;
+  }
+
+  &__filter-form {
+  }
+
+  &__filterbox {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e9e1d7;
+    margin-bottom: 40px;
+  }
+
+  &__filterbox-title {
+    position: relative;
+    @extend %lora-400;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    color: vars.$color-primary;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: vars.$color-primary;
+      left: 0;
+      bottom: 7px;
+    }
+  }
+
+  &__filterbox-itemrange {
+    padding-bottom: 20px;
+  }
+
+  &__filterbox-items {
+    column-count: 2;
+    column-gap: 40px;
+  }
+
+  &__filterbox-itemline {
+  }
+
+  &__filterbox-clean {
+    display: inline-block;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 12px;
+    color: vars.$color-primary;
+    text-decoration: underline;
+  }
+
+  &__content-box {
+  }
+
+  &__content-items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 40px;
+  }
+
+  &__content-item {
+    text-align: center;
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content-itembox {
+  }
+
+  &__content-name {
+    margin-bottom: 10px;
+  }
+
+  &__content-price {
+    font-weight: 700;
+    color: vars.$color-primary;
+  }
+
+  .checkbox-label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 11px;
+    padding-left: 25px;
+  }
+  .radio-label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 11px;
+    padding-left: 25px;
+  }
+  .checkbox-style {
+    margin-top: 0;
+    margin-left: -25px;
+  }
+  .radio-style {
+    margin-top: 0;
+  }
+}
+
+.view-mode {
+  display: flex;
+  gap: 10px;
+
+  &__item {
+  }
+
+  &__btn {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+
+  &__btn--grid {
+  }
+
+  &__btn--line {
+  }
+
+  &__container--grid {
+    display: grid;
+  }
+
+  &__container--line {
+    display: block;
+    .catalog__content-item {
+      display: flex;
+      img {
+        margin-right: 30px;
+        width: 180px;
+      }
+    }
+    .blog__list-item {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 30px;
+      img {
+        width: 180px;
+      }
+    }
+  }
+}
+
+.range {
+  input {
+    -moz-appearance: textfield;
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+
+  &__iputs {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+  }
+
+  &__label {
+    position: relative;
+    &::before {
+      content: "€";
+      position: absolute;
+      top: 11px;
+      left: 10px;
+      font-size: 11px;
+      color: vars.$color-primary;
+    }
+    input {
+      font-size: 11px;
+      color: vars.$color-primary;
+      border: 1px solid vars.$color-text-muted;
+      padding: 10px 5px 10px 30px;
+      width: 94px;
+    }
+  }
+
+  &__slider {
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 11px;
+    padding-top: 15px;
+
+    li {
+      position: relative;
+      &:first-child {
+        margin-right: 4px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: -19px;
+        left: 52%;
+        width: 1px;
+        height: 6px;
+        background-color: vars.$color-primary;
+      }
+    }
+  }
+
+  .noUi-target {
+    background-color: vars.$color-text-muted;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .noUi-horizontal {
+    height: 2px;
+  }
+  .noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 20px;
+    right: -17px;
+    top: -9px;
+  }
+  .noUi-handle {
+    border: 1px solid vars.$color-text-muted;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: none;
+  }
+  .noUi-connect {
+    background-color: transparent;
+  }
+  .noUi-handle:before,
+  .noUi-handle:after {
+    display: none;
+  }
+  .noUi-horizontal .noUi-handle.noUi-handle-upper {
+    right: 0;
   }
 }
