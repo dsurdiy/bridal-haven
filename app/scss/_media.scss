@@ -1,0 +1,16 @@
+@media (max-width: 1000px) {
+  .footer {
+    &__elements {
+      flex-wrap: wrap;
+      gap: 30px 47px;
+    }
+    &__element--social {
+      .footer__element-title {
+        display: none;
+      }
+      .footer__social-list {
+        order: 1;
+      }
+    }
+  }
+}
