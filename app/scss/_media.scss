@@ -119,6 +119,11 @@
     padding: 0;
     grid-template-columns: 1fr 280px 246px;
   }
+
+  .appointment__box {
+    gap: 20px;
+    padding: 0;
+  }
 }
 
 @media (max-width: 920px) {
@@ -268,6 +273,25 @@
   }
   .our-blog__box-right {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .appointment {
+    padding-bottom: 100px;
+    background-size: 200px;
+    background-position: center 200px;
+  }
+  .appointment__title {
+    font-size: 30px;
+  }
+  .appointment__box-title {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .appointment__img {
+    min-height: 583px;
+    object-fit: cover;
   }
 }
 
@@ -436,6 +460,54 @@
   .our-blog__box-img {
     height: 242px;
     object-fit: cover;
+  }
+
+  .appointment {
+    padding-bottom: 70px;
+  }
+  .appointment__box-title {
+    margin-bottom: 30px;
+  }
+  .appointment__box-text {
+    font-size: 16px;
+  }
+  .appointment__img {
+    min-height: 505px;
+    max-width: 220px;
+  }
+  .appointment__box-form {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 470px) {
+  .appointment {
+    padding-top: 0;
+    padding-bottom: 40px;
+    background-position: right 310px;
+    background-size: 150px;
+  }
+  .appointment__box {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .appointment__img {
+    max-width: 100%;
+    min-height: auto;
+    height: 250px;
+    width: 100%;
+  }
+  .appointment__box-form {
+    max-width: 220px;
+    margin: 0 auto;
+    order: 1;
+  }
+  .appointment__title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .appointment__box-title {
+    text-align: center;
   }
 }
 
