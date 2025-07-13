@@ -10,12 +10,12 @@ const viewGrid = document.querySelector(".view-mode__btn--grid");
 const viewLine = document.querySelector(".view-mode__btn--line");
 const viewContainer = document.querySelector(".view-mode__container");
 
-viewGrid.addEventListener("click", () => {
+viewGrid?.addEventListener("click", () => {
   viewContainer.classList.add("view-mode__container--grid");
   viewContainer.classList.remove("view-mode__container--line");
 });
 
-viewLine.addEventListener("click", () => {
+viewLine?.addEventListener("click", () => {
   viewContainer.classList.add("view-mode__container--line");
   viewContainer.classList.remove("view-mode__container--grid");
 });
@@ -42,6 +42,18 @@ const swiperReviews = new Swiper('.reviews-slider', {
   pagination: {
     el: ".reviews-slider-pagination",
     type: "fraction",
+  },
+  breakpoints: {
+    360: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    768: {
+      slidesPerView: 8,
+    },
+    1024: {
+      slidesPerView: 12,
+    },
   },
 });
 
