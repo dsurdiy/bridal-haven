@@ -47,6 +47,17 @@
     position: relative;
     z-index: 1;
   }
+
+  .blog-main__inner {
+    gap: 20px;
+  }
+  .blog-main__img {
+    max-width: 100%;
+  }
+
+  .blog-one h1 {
+    font-size: 60px;
+  }
 }
 
 @media (max-width: 1000px) {
@@ -123,6 +134,20 @@
   .appointment__box {
     gap: 20px;
     padding: 0;
+  }
+
+  .blog-main__category {
+    margin-bottom: 20px;
+  }
+  .blog-main__title {
+    font-size: 34px;
+    margin-bottom: 20px;
+  }
+  .blog-main__link {
+    padding: 15px 60px;
+  }
+  .blog__nav-btns {
+    margin-left: 30px;
   }
 }
 
@@ -274,6 +299,25 @@
   .our-blog__box-right {
     display: none;
   }
+
+  .blog-main__inner {
+    flex-direction: column;
+  }
+  .blog__nav {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .blog__nav-title {
+    width: 100%;
+    text-align: center;
+  }
+  .blog__nav-btns {
+    margin-left: auto;
+  }
+  .blog__list {
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -295,6 +339,26 @@
   }
   .reviews-slider__slide img {
     width: 100%;
+  }
+
+  .blog-one h1 {
+    font-size: 42px;
+  }
+  .blog-one__stats {
+    margin-bottom: 20px;
+  }
+  .blog-one b {
+    font-size: 26px;
+  }
+  .blog-one b:first-of-type {
+    margin-bottom: 30px;
+  }
+  .blog-one h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .blog-one h4 {
+    font-size: 24px;
   }
 }
 
@@ -491,6 +555,32 @@
   .reviews-top__title {
     font-size: 30px;
   }
+
+  .blog__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .blog__nav-btns {
+    display: none;
+  }
+  .blog__nav-category {
+    width: 100%;
+    margin-right: 0;
+  }
+  .search {
+    width: 100%;
+  }
+  .search__form {
+    width: 100%;
+  }
+
+  .blog-one__stats {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .blog-one__date::after {
+    display: none;
+  }
 }
 
 @media (max-width: 470px) {
@@ -622,5 +712,13 @@
     right: 0;
     left: 0;
     bottom: 0;
+  }
+
+  .blog__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .blog-one h1 {
+    font-size: 32px;
   }
 }
