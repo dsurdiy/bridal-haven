@@ -1511,6 +1511,24 @@ body {
 }
 
 .catalog {
+  &__popup {
+    display: none;
+    position: relative;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: vars.$color-text-muted;
+    font-size: 16px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: -20px;
+      width: 14px;
+      height: 9px;
+      background-image: url(../images/sort-arrow.svg);
+    }
+  }
   &__top {
     margin-bottom: 80px;
     display: flex;
@@ -1536,6 +1554,7 @@ body {
   }
 
   &__sort-form {
+    margin-bottom: 0;
   }
 
   &__sort-wrapper {
