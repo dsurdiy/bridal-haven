@@ -1,3 +1,32 @@
+const openModalBtn = document.querySelector(".open-modal");
+const closeModalBtn = document.querySelector(".close-modal");
+const modal = document.querySelector(".modal");
+const modalOverlay = document.querySelector(".modal__overlay");
+
+openModalBtn.addEventListener("click", openModal);
+closeModalBtn.addEventListener("click", closeModal);
+
+if (modalOverlay) {
+  modalOverlay.addEventListener("click", closeModal);
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modal.getAttribute("aria-hidden") === "false") {
+    closeModal();
+  }
+});
+
+function openModal() {
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("scroll-lock");
+}
+
+function closeModal() {
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("scroll-lock");
+}
+
+
 const breakpoint = window.matchMedia("(min-width: 600px)");
 let sliderMobile = null;
 
