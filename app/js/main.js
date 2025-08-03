@@ -27,6 +27,35 @@ function closeModal() {
 }
 
 
+const openPopupBtn = document.querySelector(".open-popup");
+const closePopupBtn = document.querySelector(".close-popup");
+const popup = document.querySelector(".popup");
+const popupOverlay = document.querySelector(".popup__overlay");
+
+openPopupBtn.addEventListener("click", openPopup);
+closePopupBtn.addEventListener("click", closePopup);
+
+if (popupOverlay) {
+  popupOverlay.addEventListener("click", closePopup);
+}
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && popup.getAttribute("aria-hidden") === "false") {
+    closePopup();
+  }
+});
+
+function openPopup() {
+  popup.setAttribute("aria-hidden", "false");
+  document.body.classList.add("scroll-lock");
+}
+
+function closePopup() {
+  popup.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("scroll-lock");
+}
+
+
 const breakpoint = window.matchMedia("(min-width: 600px)");
 let sliderMobile = null;
 
